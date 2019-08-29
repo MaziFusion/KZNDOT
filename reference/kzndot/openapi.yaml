@@ -19,7 +19,7 @@ servers:
 paths:
   /token:
     post:
-      summary: ''
+      summary: Token
       responses:
         '200':
           description: OK
@@ -43,5 +43,15 @@ paths:
                 password:
                   type: string
             examples: {}
+  /user/general:
+    get:
+      summary: General Information
+      tags: []
+      responses: {}
+    put:
+      summary: General Information
+      responses:
+        '200':
+          description: OK
 components:
   schemas: {}
