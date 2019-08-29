@@ -1,0 +1,37 @@
+openapi: 3.0.0
+info:
+  title: KZNDOT
+  version: '1.0'
+  description: >-
+    The following is an API reference for the KZN DOT mobile application and
+    backend. The document is designed to be a guide and documentation for the
+    APIs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Developers are expected to keep this document up to date and all changes that
+    are made to the APIs and models need to be updated.
+  contact:
+    name: Mazi Muhlari
+    email: mazim@boxfusion.co.za
+servers:
+  - url: 'http://kzndot.smartcitizen.com/api'
+  - url: 'http://testkzndot.smartcitizen.com/api'
+    description: ''
+paths: {}
+components:
+  schemas: {}
