@@ -47,11 +47,64 @@ paths:
     get:
       summary: General Information
       tags: []
-      responses: {}
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  station:
+                    type: string
+                  region:
+                    type: string
+                  date:
+                    type: string
+                  nameOfOfficer:
+                    type: string
+                  rank:
+                    type: string
+                  officerInfrastructureNo:
+                    type: string
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: x-auth-token
+          description: The authentication token
+          required: true
+      description: Retreive the general information about the officer such as their rank and station information.
     put:
       summary: General Information
       responses:
         '200':
           description: OK
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: x-auth-token
+          description: The authentication token
+          required: true
+      description: Update the general information about the officer such as their rank and station information.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                station:
+                  type: string
+                region:
+                  type: string
+                date:
+                  type: string
+                nameOfOfficer:
+                  type: string
+                rank:
+                  type: string
+                officerInfrastructureNo:
+                  type: string
 components:
   schemas: {}
