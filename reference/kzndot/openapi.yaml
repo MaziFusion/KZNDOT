@@ -7,22 +7,6 @@ info:
     backend. The document is designed to be a guide and documentation for the
     APIs.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     Developers are expected to keep this document up to date and all changes that
     are made to the APIs and models need to be updated.
   contact:
@@ -32,6 +16,32 @@ servers:
   - url: 'http://kzndot.smartcitizen.com/api'
   - url: 'http://testkzndot.smartcitizen.com/api'
     description: ''
-paths: {}
+paths:
+  /token:
+    post:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+      description: Authenticate a user for access to the system. This request returns a new token.
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+            examples: {}
 components:
   schemas: {}
