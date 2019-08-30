@@ -44,7 +44,7 @@ paths:
             examples: {}
       tags:
         - authentication
-  /users/general:
+  '/users/{userId}/general':
     get:
       summary: Get General Information
       tags:
@@ -285,7 +285,7 @@ paths:
           name: x-auth-token
           required: true
           description: The authentication token
-  /checklists/inpsection/pre:
+  '/checklists/{checklistId}/inpsection/pre':
     get:
       summary: Your GET endpoint
       tags:
@@ -299,7 +299,12 @@ paths:
           name: x-auth-token
           required: true
           description: The authentication token
-  /checklists/inspection/post:
+    put:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+  '/checklists/{checklistId}/inspection/post':
     get:
       parameters:
         - schema:
@@ -311,7 +316,12 @@ paths:
       tags:
         - checklists
         - post checklists
-  /tasks/summary:
+    put:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+  '/tasks/{taskId}/summary':
     get:
       summary: Get Users Task List Summary
       tags:
@@ -357,7 +367,7 @@ paths:
           description: OK
       tags:
         - comments
-  /roadblocks/attendances:
+  '/roadblocks/{roadblockId}/attendances':
     get:
       summary: Your GET endpoint
       tags: []
@@ -373,7 +383,7 @@ paths:
       responses:
         '200':
           description: OK
-  /checklists/general:
+  '/checklists/{checklistId}/general':
     get:
       summary: Your GET endpoint
       tags: []
@@ -383,20 +393,35 @@ paths:
       responses:
         '200':
           description: OK
-  /checklists/trip:
+  '/checklists/{checklistId}/trip':
     get:
       summary: Your GET endpoint
       tags: []
       responses: {}
-  /checklists/equipment/pre:
+    put:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+  '/checklists/{checklistId}/equipment/pre':
     get:
       summary: Your GET endpoint
       tags: []
       responses: {}
-  /checklists/equipment/post:
+    put:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+  '/checklists/{checklistId}/equipment/post':
     get:
       summary: Your GET endpoint
       tags: []
       responses: {}
+    put:
+      summary: ''
+      responses:
+        '200':
+          description: OK
 components:
   schemas: {}
