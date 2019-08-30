@@ -167,7 +167,7 @@ paths:
       description: Returns a list of tasks for a specific user.
   /accidents:
     get:
-      summary: Your GET endpoint
+      summary: Get List of Accidents
       tags:
         - accidents
       responses: {}
@@ -178,9 +178,15 @@ paths:
           description: The authentication token
           required: true
           name: x-auth-token
+        - schema:
+            type: string
+          in: query
+          name: status
+          description: filter the accidents by their statuses.
+      description: Returns a list of accidents.
   /incidents:
     get:
-      summary: Your GET endpoint
+      summary: Get List of Incidents
       tags:
         - incidents
       responses: {}
@@ -191,6 +197,12 @@ paths:
           name: x-auth-token
           required: true
           description: The authentication token
+        - schema:
+            type: string
+          in: query
+          description: filter the incidents by their statuses.
+          name: status
+      description: Returns a list of incidents.
   /checklists:
     get:
       summary: Your GET endpoint
@@ -282,5 +294,12 @@ paths:
       tags:
         - checklists
         - post checklists
+  /tasks/summary:
+    get:
+      summary: Get Users Task List Summary
+      tags:
+        - tasks
+      responses: {}
+      description: Returns a summary of the list of tasks for a user.
 components:
   schemas: {}
