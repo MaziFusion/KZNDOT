@@ -108,6 +108,8 @@ paths:
                   type: string
                 officerInfrastructureNo:
                   type: string
+      tags:
+        - users
   /tasks:
     get:
       summary: Get Users Task List
@@ -183,6 +185,11 @@ paths:
           in: query
           name: status
           description: filter the accidents by their statuses.
+        - schema:
+            type: string
+          in: query
+          name: userId
+          description: Filters accidents for a specific user when present.
       description: Returns a list of accidents.
   /incidents:
     get:
@@ -202,6 +209,11 @@ paths:
           in: query
           description: filter the incidents by their statuses.
           name: status
+        - schema:
+            type: string
+          in: query
+          name: userId
+          description: Filters incidents for a specific user when present.
       description: Returns a list of incidents.
   /checklists:
     get:
@@ -301,5 +313,25 @@ paths:
         - tasks
       responses: {}
       description: Returns a summary of the list of tasks for a user.
+  /accidents/{accidentId}:
+    parameters:
+      name: accidentId
+      in: path
+      required: true
+      type: string
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses: {}
+  /incidents/{incidentId}:
+    parameters:
+      name: incidentId
+      in: path
+      required: true
+      type: string
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses: {}
 components:
   schemas: {}
