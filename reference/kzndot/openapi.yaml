@@ -230,7 +230,7 @@ paths:
           required: true
           description: The authentication token
     post:
-      summary: ''
+      summary: Submit Task Checklists
       responses:
         '200':
           description: OK
@@ -249,7 +249,7 @@ paths:
           required: true
           description: The authentication token
     post:
-      summary: ''
+      summary: Create Task Transactions
       responses:
         '200':
           description: OK
@@ -268,7 +268,7 @@ paths:
         - startstop
         - tasks
     post:
-      summary: ''
+      summary: Submit Task Start Stop
       responses:
         '200':
           description: OK
@@ -286,7 +286,7 @@ paths:
           required: true
           description: The authentication token
     post:
-      summary: ''
+      summary: Create Arrest
       responses:
         '200':
           description: OK
@@ -319,7 +319,7 @@ paths:
         - tasks
         - checklists
     put:
-      summary: ''
+      summary: Update Task Checklist Pre Inspection
       responses:
         '200':
           description: OK
@@ -337,7 +337,7 @@ paths:
         - tasks
       summary: Get Task Checklist Post Inspection
     put:
-      summary: ''
+      summary: Update Task Checklist Post Inspection
       responses:
         '200':
           description: OK
@@ -382,7 +382,7 @@ paths:
         - comments
       responses: {}
     post:
-      summary: ''
+      summary: Create Comment
       responses:
         '200':
           description: OK
@@ -396,7 +396,7 @@ paths:
         - roadblocks
       responses: {}
     post:
-      summary: ''
+      summary: Submit Task Roadblock Attendance
       responses:
         '200':
           description: OK
@@ -416,7 +416,7 @@ paths:
         - checklists
       responses: {}
     put:
-      summary: ''
+      summary: Update Task Checklist General Details
       responses:
         '200':
           description: OK
@@ -429,7 +429,7 @@ paths:
         - trips
       responses: {}
     put:
-      summary: ''
+      summary: Update Task Checklist Trip
       responses:
         '200':
           description: OK
@@ -442,7 +442,7 @@ paths:
         - equipment
       responses: {}
     put:
-      summary: ''
+      summary: Update Task Checklist Pre Equipment
       responses:
         '200':
           description: OK
@@ -455,7 +455,7 @@ paths:
         - equipment
       responses: {}
     put:
-      summary: ''
+      summary: Update Task Checklist Post Equipment
       responses:
         '200':
           description: OK
@@ -472,7 +472,7 @@ paths:
         - startstop
       responses: {}
     put:
-      summary: ''
+      summary: Update Task Start Stop General Details
       responses:
         '200':
           description: OK
