@@ -7,14 +7,16 @@ info:
     backend. The document is designed to be a guide and documentation for the
     APIs.
 
+
+
     Developers are expected to keep this document up to date and all changes that
     are made to the APIs and models need to be updated.
   contact:
     name: Mazi Muhlari
     email: mazim@boxfusion.co.za
 servers:
-  - url: 'http://kzndot.smartcitizen.com/api'
-  - url: 'http://testkzndot.smartcitizen.com/api'
+  - url: 'http://kzndot.smartcitizen.com/api/v1'
+  - url: 'http://testkzndot.smartcitizen.com/api/v1'
     description: ''
 paths:
   /token:
@@ -43,7 +45,7 @@ paths:
                 password:
                   type: string
             examples: {}
-  /user/general:
+  /users/general:
     get:
       summary: General Information
       tags: []
@@ -106,5 +108,10 @@ paths:
                   type: string
                 officerInfrastructureNo:
                   type: string
+  /tasks:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses: {}
 components:
   schemas: {}
