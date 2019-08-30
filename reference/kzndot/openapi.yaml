@@ -313,25 +313,30 @@ paths:
         - tasks
       responses: {}
       description: Returns a summary of the list of tasks for a user.
-  /accidents/{accidentId}:
+  '/accidents/{accidentId}':
     parameters:
       name: accidentId
       in: path
       required: true
       type: string
+      description: The id of the incident to retrieve
     get:
       summary: Your GET endpoint
       tags: []
       responses: {}
-  /incidents/{incidentId}:
+      description: Returns the details of a specific accident.
+  '/incidents/{incidentId}':
     parameters:
       name: incidentId
       in: path
       required: true
       type: string
+      description: The id of the incident to retrieve
     get:
       summary: Your GET endpoint
       tags: []
       responses: {}
+      parameters: []
+      description: Returns the details of a specific incident.
 components:
   schemas: {}
