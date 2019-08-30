@@ -46,7 +46,7 @@ paths:
         - authentication
   '/users/{userId}/general':
     get:
-      summary: Get General Information
+      summary: Get User General Details
       tags:
         - users
       responses:
@@ -112,7 +112,7 @@ paths:
         - users
   /tasks:
     get:
-      summary: Get Users Task List
+      summary: Get Tasks
       tags:
         - tasks
       responses:
@@ -169,7 +169,7 @@ paths:
       description: Returns a list of tasks for a specific user.
   /accidents:
     get:
-      summary: Get List of Accidents
+      summary: Get Accidents
       tags:
         - accidents
       responses: {}
@@ -193,7 +193,7 @@ paths:
       description: Returns a list of accidents.
   /incidents:
     get:
-      summary: Get List of Incidents
+      summary: Get Incidents
       tags:
         - incidents
       responses: {}
@@ -217,7 +217,7 @@ paths:
       description: Returns a list of incidents.
   '/tasks/{taskId}/checklists':
     get:
-      summary: Your GET endpoint
+      summary: Get Task Checklists
       tags:
         - checklists
       responses: {}
@@ -235,7 +235,7 @@ paths:
           description: OK
   '/tasks/{taskId}/transactions':
     get:
-      summary: Your GET endpoint
+      summary: Get Task Transactions
       tags:
         - transactions
       responses: {}
@@ -253,7 +253,7 @@ paths:
           description: OK
   '/tasks/{taskId}/startstop':
     get:
-      summary: Your GET endpoint
+      summary: Get Task Start Stop
       responses: {}
       parameters:
         - schema:
@@ -271,7 +271,7 @@ paths:
           description: OK
   /arrests:
     get:
-      summary: Your GET endpoint
+      summary: Get Arrests
       tags:
         - arrests
       responses: {}
@@ -284,7 +284,7 @@ paths:
           description: The authentication token
   '/tasks/{taskId}/roadblocks':
     get:
-      summary: Your GET endpoint
+      summary: Get Task Roadblocks
       tags:
         - roadblocks
       responses: {}
@@ -297,7 +297,7 @@ paths:
           description: The authentication token
   '/tasks/{taskId}/checklists/{checklistId}/inpsection/pre':
     get:
-      summary: Your GET endpoint
+      summary: Get Task Checklist Pre Inspection
       tags:
         - checklists
         - pre checklists
@@ -326,6 +326,7 @@ paths:
       tags:
         - checklists
         - post checklists
+      summary: Get Task Checklist Post Inspection
     put:
       summary: ''
       responses:
@@ -333,7 +334,7 @@ paths:
           description: OK
   '/tasks/{taskId}':
     get:
-      summary: Get Users Task List Summary
+      summary: Get Task Details
       tags:
         - tasks
       responses: {}
@@ -346,7 +347,7 @@ paths:
       type: string
       description: The id of the incident to retrieve
     get:
-      summary: Get Accident By Id
+      summary: Get Accident Details
       tags:
         - accidents
       responses: {}
@@ -359,7 +360,7 @@ paths:
       type: string
       description: The id of the incident to retrieve
     get:
-      summary: Get Incident By Id
+      summary: Get Incident Details
       tags:
         - incidents
       responses: {}
@@ -367,7 +368,7 @@ paths:
       description: Returns the details of a specific incident.
   /comments:
     get:
-      summary: Your GET endpoint
+      summary: Get Comments
       tags: []
       responses: {}
     post:
@@ -379,7 +380,7 @@ paths:
         - comments
   '/tasks/{taskId}/roadblocks/{roadblockId}/attendances':
     get:
-      summary: Your GET endpoint
+      summary: Get Task Roadblock Attendance
       tags: []
       responses: {}
     post:
@@ -389,13 +390,13 @@ paths:
           description: OK
   /signature:
     post:
-      summary: ''
+      summary: Create Signature
       responses:
         '200':
           description: OK
   '/tasks/{taskId}/checklists/{checklistId}/general':
     get:
-      summary: Your GET endpoint
+      summary: Get Task Checklist General Details
       tags: []
       responses: {}
     put:
@@ -405,7 +406,7 @@ paths:
           description: OK
   '/tasks/{taskId}/checklists/{checklistId}/trip':
     get:
-      summary: Your GET endpoint
+      summary: Get Task Checklist Trip
       tags: []
       responses: {}
     put:
@@ -415,7 +416,7 @@ paths:
           description: OK
   '/tasks/{taskId}/checklists/{checklistId}/equipment/pre':
     get:
-      summary: Your GET endpoint
+      summary: Get Task Checklist Pre Equipment
       tags: []
       responses: {}
     put:
@@ -425,7 +426,7 @@ paths:
           description: OK
   '/tasks/{taskId}/checklists/{checklistId}/equipment/post':
     get:
-      summary: Your GET endpoint
+      summary: Get Task Checklist Post Equipment
       tags: []
       responses: {}
     put:
@@ -440,7 +441,7 @@ paths:
       required: true
       type: string
     get:
-      summary: Your GET endpoint
+      summary: Get Task Start Stop General Details
       tags: []
       responses: {}
     put:
