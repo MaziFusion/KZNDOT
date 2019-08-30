@@ -241,6 +241,11 @@ paths:
           name: x-auth-token
           required: true
           description: The authentication token
+    post:
+      summary: ''
+      responses:
+        '200':
+          description: OK
   /stopandstarts:
     get:
       summary: Your GET endpoint
@@ -321,8 +326,9 @@ paths:
       type: string
       description: The id of the incident to retrieve
     get:
-      summary: Your GET endpoint
-      tags: []
+      summary: Get Accident By Id
+      tags:
+        - accidents
       responses: {}
       description: Returns the details of a specific accident.
   '/incidents/{incidentId}':
@@ -333,10 +339,39 @@ paths:
       type: string
       description: The id of the incident to retrieve
     get:
-      summary: Your GET endpoint
-      tags: []
+      summary: Get Incident By Id
+      tags:
+        - incidents
       responses: {}
       parameters: []
       description: Returns the details of a specific incident.
+  /comments:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses: {}
+    post:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+      tags:
+        - comments
+  /roadblocks/attendances:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses: {}
+    post:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+  /signature:
+    post:
+      summary: ''
+      responses:
+        '200':
+          description: OK
 components:
   schemas: {}
