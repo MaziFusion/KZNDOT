@@ -1,0 +1,9 @@
+{
+  "title": "StopAndStart",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Transaction",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    }
+  }
+}
