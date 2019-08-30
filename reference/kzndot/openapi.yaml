@@ -220,6 +220,7 @@ paths:
       summary: Get Task Checklists
       tags:
         - checklists
+        - tasks
       responses: {}
       parameters:
         - schema:
@@ -238,6 +239,7 @@ paths:
       summary: Get Task Transactions
       tags:
         - transactions
+        - tasks
       responses: {}
       parameters:
         - schema:
@@ -264,12 +266,13 @@ paths:
           description: The authentication token
       tags:
         - startstop
+        - tasks
     post:
       summary: ''
       responses:
         '200':
           description: OK
-  /arrests:
+  '/tasks/{taskId}/arrests':
     get:
       summary: Get Arrests
       tags:
@@ -282,11 +285,17 @@ paths:
           name: x-auth-token
           required: true
           description: The authentication token
+    post:
+      summary: ''
+      responses:
+        '200':
+          description: OK
   '/tasks/{taskId}/roadblocks':
     get:
       summary: Get Task Roadblocks
       tags:
         - roadblocks
+        - tasks
       responses: {}
       parameters:
         - schema:
@@ -298,9 +307,6 @@ paths:
   '/tasks/{taskId}/checklists/{checklistId}/inpsection/pre':
     get:
       summary: Get Task Checklist Pre Inspection
-      tags:
-        - checklists
-        - pre checklists
       responses: {}
       parameters:
         - schema:
@@ -309,6 +315,9 @@ paths:
           name: x-auth-token
           required: true
           description: The authentication token
+      tags:
+        - tasks
+        - checklists
     put:
       summary: ''
       responses:
@@ -325,7 +334,7 @@ paths:
           required: true
       tags:
         - checklists
-        - post checklists
+        - tasks
       summary: Get Task Checklist Post Inspection
     put:
       summary: ''
@@ -369,7 +378,8 @@ paths:
   /comments:
     get:
       summary: Get Comments
-      tags: []
+      tags:
+        - comments
       responses: {}
     post:
       summary: ''
@@ -381,7 +391,9 @@ paths:
   '/tasks/{taskId}/roadblocks/{roadblockId}/attendances':
     get:
       summary: Get Task Roadblock Attendance
-      tags: []
+      tags:
+        - tasks
+        - roadblocks
       responses: {}
     post:
       summary: ''
@@ -394,10 +406,14 @@ paths:
       responses:
         '200':
           description: OK
+      tags:
+        - signatures
   '/tasks/{taskId}/checklists/{checklistId}/general':
     get:
       summary: Get Task Checklist General Details
-      tags: []
+      tags:
+        - tasks
+        - checklists
       responses: {}
     put:
       summary: ''
@@ -407,7 +423,10 @@ paths:
   '/tasks/{taskId}/checklists/{checklistId}/trip':
     get:
       summary: Get Task Checklist Trip
-      tags: []
+      tags:
+        - tasks
+        - checklists
+        - trips
       responses: {}
     put:
       summary: ''
@@ -417,7 +436,10 @@ paths:
   '/tasks/{taskId}/checklists/{checklistId}/equipment/pre':
     get:
       summary: Get Task Checklist Pre Equipment
-      tags: []
+      tags:
+        - tasks
+        - checklists
+        - equipment
       responses: {}
     put:
       summary: ''
@@ -427,7 +449,10 @@ paths:
   '/tasks/{taskId}/checklists/{checklistId}/equipment/post':
     get:
       summary: Get Task Checklist Post Equipment
-      tags: []
+      tags:
+        - tasks
+        - checklists
+        - equipment
       responses: {}
     put:
       summary: ''
@@ -442,7 +467,9 @@ paths:
       type: string
     get:
       summary: Get Task Start Stop General Details
-      tags: []
+      tags:
+        - tasks
+        - startstop
       responses: {}
     put:
       summary: ''
