@@ -17,7 +17,7 @@ servers:
   - url: 'http://testkzndot.smartcitizen.com/api/v1'
     description: ''
 paths:
-  '/token':
+  /token:
     post:
       summary: Generate Token
       responses:
@@ -110,7 +110,7 @@ paths:
                   type: string
       tags:
         - users
-  '/tasks':
+  /tasks:
     get:
       summary: Get Users Task List
       tags:
@@ -167,7 +167,7 @@ paths:
           required: true
           description: The authentication token
       description: Returns a list of tasks for a specific user.
-  '/accidents':
+  /accidents:
     get:
       summary: Get List of Accidents
       tags:
@@ -191,7 +191,7 @@ paths:
           name: userId
           description: Filters accidents for a specific user when present.
       description: Returns a list of accidents.
-  '/incidents':
+  /incidents:
     get:
       summary: Get List of Incidents
       tags:
@@ -269,7 +269,7 @@ paths:
       responses:
         '200':
           description: OK
-  '/arrests':
+  /arrests:
     get:
       summary: Your GET endpoint
       tags:
@@ -282,7 +282,7 @@ paths:
           name: x-auth-token
           required: true
           description: The authentication token
-  '/roadblocks':
+  '/tasks/{taskId}/roadblocks':
     get:
       summary: Your GET endpoint
       tags:
@@ -331,7 +331,7 @@ paths:
       responses:
         '200':
           description: OK
-  '/tasks/{taskId}/summary':
+  '/tasks/{taskId}':
     get:
       summary: Get Users Task List Summary
       tags:
@@ -365,7 +365,7 @@ paths:
       responses: {}
       parameters: []
       description: Returns the details of a specific incident.
-  '/comments':
+  /comments:
     get:
       summary: Your GET endpoint
       tags: []
@@ -387,7 +387,7 @@ paths:
       responses:
         '200':
           description: OK
-  '/signature':
+  /signature:
     post:
       summary: ''
       responses:
